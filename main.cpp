@@ -77,7 +77,7 @@ public:
     }
 };
 
-// function to process files in batch 
+// function to process files in batch from start index to end index 
 void processFilesBatch(const std::vector<fs::path>& files, size_t start, size_t end, ThreadSafeQueue& outputQueue) {
     std::priority_queue<MarketData> localHeap;
     std::vector<std::ifstream> fileStreams;
@@ -119,6 +119,8 @@ void processFilesBatch(const std::vector<fs::path>& files, size_t start, size_t 
 
 
 // Function to merge market data from multiple files into a single output file using threads.
+// 1. first process files in batches for parallel processing
+// 2. After processing is done merge the data in a single file
 void mergeMarketData(const std::string& inputDir, const std::string& outputFile, size_t maxOpenFiles) {
     // Collect all files in the input directory.
     std::vector<fs::path> files;
