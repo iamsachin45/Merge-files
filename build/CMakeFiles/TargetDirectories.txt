@@ -1,0 +1,3 @@
+/home/blackp/assignment/build/CMakeFiles/main.dir
+/home/blackp/assignment/build/CMakeFiles/edit_cache.dir
+/home/blackp/assignment/build/CMakeFiles/rebuild_cache.dir
