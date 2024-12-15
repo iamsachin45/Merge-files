@@ -160,7 +160,7 @@ void mergeSortedChunks(const std::vector<std::string>& tempFiles, const std::str
 // Takes input directory, output file name, and chunk size as command-line arguments.
 int main(int argc, char* argv[]) {
     if (argc != 4) {
-        std::cerr << "Usage: " << argv[0] << " <input_directory> <output_file> <chunk_size>\n";
+        std::cerr << "Error: expected four inputs \n";
         return 1;
     }
 
